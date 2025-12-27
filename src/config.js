@@ -1,10 +1,12 @@
 // endpoint của các service
-const config = {
-  PRODUCT_SERVICE_URL: "http://localhost:3001",
-  BRANCH_SERVICE_URL: "http://localhost:3002",
-  ORDER_SERVICE_URL:"http://localhost:3003",
-  REPORT_SERVICE_URL:"http://localhost:3004",
-  EMPLOYEE_SERVICE_URL:"http://localhost:3005",
+import dotenv from 'dotenv';
+dotenv.config();
+export const config = {
+  PRODUCT_SERVICE_URL: process.env.PRODUCT_SERVICE_URL,
+  BRANCH_SERVICE_URL: process.env.BRANCH_SERVICE_URL,
+  ORDER_SERVICE_URL: process.env.ORDER_SERVICE_URL,
+  REPORT_SERVICE_URL: process.env.REPORT_SERVICE_URL,
+  STAFF_SERVICE_URL: process.env.STAFF_SERVICE_URL,
+  AUTH_SERVICE_URL: process.env.AUTH_SERVICE_URL,
   PORT: 3000
 };
-export default config;

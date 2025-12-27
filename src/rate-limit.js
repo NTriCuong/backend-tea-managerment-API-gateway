@@ -1,5 +1,5 @@
-
-const limiter = rateLimit({
+import { rateLimit } from 'express-rate-limit'
+export const limiter = rateLimit({
   windowMs: 1 * 60 * 1000,   // 1 phút
   max: 100,                  // tối đa 100 request / phút / IP
   standardHeaders: true,
@@ -8,4 +8,3 @@ const limiter = rateLimit({
     message: "bạn đã gửi quá nhiều request vui lòng thử lại sau",
   },
 });
-export default limiter;
